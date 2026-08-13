@@ -1,0 +1,71 @@
+/* --- Global Styles --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light grey background for the main page */
+    color: #333; /* Dark grey text for readability */
+}
+
+/* --- Navigation Menu --- */
+nav {
+    background-color: #FF8C00; /* Dark Orange background */
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav img#nav-logo {
+    height: 50px; /* Adjust logo size */
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* --- Navigation Interactive Requirements --- */
+
+/* Hover Effect: Changes to Yellow when the mouse is over the link */
+nav ul li a:hover {
+    background-color: #FFD700; /* Bright Yellow */
+    color: #333; /* Dark text for contrast against yellow */
+}
+
+/* Active Page: Clearly indicates which page the user is currently on */
+nav ul li a.active {
+    background-color: #FFD700; /* Bright Yellow */
+    color: #333;
+    border-bottom: 3px solid #cc7000; /* A darker orange line underneath */
+}
+
+/* --- Main Content Area --- */
+main {
+    padding: 20px;
+    min-height: 400px; /* Ensures the page has some height before the footer */
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #FF8C00; /* Matches the Navigation Orange */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
