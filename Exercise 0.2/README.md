@@ -62,3 +62,27 @@ energy-webpage-v1
 │
 ├── index.html
 └── README.md
+
+## Generative AI Reflection
+
+In this section, briefly address:
+
+Which tool(s) you used (if any):
+
+Google Gemini
+
+What you used GenAI for (e.g. structure, syntax, debugging):
+
+Generative AI was used to help troubleshoot CSS layouts, refine element positioning and padding, and assist in understanding basic JavaScript syntax and event handling for the FAQ section.
+
+What you changed or adapted after generation:
+
+Adjusted container widths, margins, and padding to align with the website design requirements. Refactored the generated JavaScript to ensure it used straightforward, procedural functions and class toggling rather than overly complex logic.
+
+What you learned from using GenAI:
+
+Learned how CSS positioning properties interact to create responsive layouts, reducing trial-and-error time. Gained foundational knowledge of JavaScript syntax.
+
+Any limitations or issues you encountered:
+
+The AI initially generated overly complex code that was difficult to understand. I had to iteratively prompt the AI to simplify its output until it provided a basic, procedural solution that I could fully comprehend and confidently implement.

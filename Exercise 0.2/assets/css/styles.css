@@ -1,10 +1,11 @@
 /* --- Global Styles --- */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /* Push with new font and line gap */
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9; /* Light grey background for the main page */
-    color: #333; /* Dark grey text for readability */
+    background-color: #f9f9f9; 
+    color: #333; 
+    line-height: 1.6; 
 }
 
 /* --- Navigation Menu --- */
@@ -16,7 +17,7 @@ nav {
 }
 
 nav img#nav-logo {
-    height: 50px; /* Adjust logo size */
+    height: 50px; /* Logo size */
     margin-right: 20px;
 }
 
@@ -40,7 +41,7 @@ nav ul li a {
     transition: background-color 0.3s;
 }
 
-/* --- Navigation Interactive Requirements --- */
+/* --- Navigation Interactive --- */
 
 /* Hover Effect: Changes to Yellow when the mouse is over the link */
 nav ul li a:hover {
@@ -59,6 +60,83 @@ nav ul li a.active {
 main {
     padding: 20px;
     min-height: 400px; /* Ensures the page has some height before the footer */
+}
+
+/* --- Main Content Typography (Updated) --- */
+main h1 {
+    color: #FF8C00;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+main h2 {
+    color: #444;
+    margin-top: 30px;
+}
+
+/* --- Table Styles (television.html) --- */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #FF8C00;
+    color: white;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* --- Reference List Styles (about.html) --- */
+.info-section ul li {
+    margin-bottom: 10px;
+}
+
+/* --- FAQ Accordion Styles (index.html) --- */
+.accordion {
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Adds shadow */
+}
+
+/* Hover effect */
+.accordion:hover {
+    background-color: #f1f1f1;
+    border-color: #FF8C00; /* Subtle orange border on hover */
+}
+
+/* The hidden answer boxes */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none; /* Strictly hides the text by default */
+    overflow: hidden;
+    border-left: 4px solid #FF8C00;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 /* --- Footer --- */
