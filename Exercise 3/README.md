@@ -83,11 +83,14 @@ This project follows ethical data visualisation practices by:
 
 ## AI Declaration
 
-Artificial Intelligence (AI) tools may have been used to assist with aspects of this assignment, such as:
+## AI Declaration
 
-- Generating example code
-- Improving code structure
-- Assisting with documentation writing
+Artificial Intelligence (AI) tools were used to assist with aspects of this assignment, specifically:
+
+- Generating ideas for the storyboard arrangement and narrative flow.
+- Writing and refining the script and explanatory text for the storyboards.
+- Assisting with writing and structuring HTML code for the web pages.
+- Troubleshooting and formatting CSS layouts.
 
 All AI-generated assistance was reviewed, modified where necessary, and integrated responsibly into the project.
 
