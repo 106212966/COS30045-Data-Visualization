@@ -235,3 +235,54 @@ footer {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+
+/* --- SVG Comparison Layout --- */
+.svg-comparison {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.svg-item {
+    width: 48%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.svg-item h3 {
+    text-align: center;
+    margin-top: 0;
+}
+
+/* --- Code Comparison Table --- */
+.code-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    table-layout: fixed;
+}
+
+.code-table th, .code-table td {
+    border: 1px solid #ccc;
+    padding: 15px;
+    vertical-align: top;
+}
+
+.code-table th {
+    background-color: #f4f4f4;
+    font-size: 1.1em;
+}
+
+/* --- Preformatted Code Blocks --- */
+pre {
+    background-color: #272822;
+    color: #f8f8f2;
+    padding: 15px;
+    overflow-x: auto;
+    max-height: 400px;
+    font-size: 0.85em;
+    border-radius: 5px;
+}
