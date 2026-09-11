@@ -1,0 +1,237 @@
+/* --- Global Box-Sizing & Viewport Stability --- */
+html {
+    box-sizing: border-box;
+    /* Forces scrollbar track across all pages so the nav bar width never jumps */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* --- Global Image Safeguard --- */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Global Styles --- */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; 
+    color: #333; 
+    line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* --- Navigation Menu --- */
+nav {
+    background-color: #FF8C00; /* Dark Orange background */
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+nav img#nav-logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* --- Navigation Interactive --- */
+nav ul li a:hover {
+    background-color: #FFD700;
+    color: #333;
+}
+
+nav ul li a.active {
+    background-color: #FFD700;
+    color: #333;
+    border-bottom: 3px solid #cc7000;
+}
+
+/* --- Main Content Area --- */
+main {
+    padding: 20px;
+    min-height: 400px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centers page content consistently across all tabs */
+}
+
+main h1 {
+    color: #FF8C00;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+main h2 {
+    color: #444;
+    margin-top: 30px;
+}
+
+/* --- Table Styles (televisions.html) --- */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #FF8C00;
+    color: white;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* --- Reference List Styles (about.html) --- */
+.info-section ul li {
+    margin-bottom: 10px;
+}
+
+/* --- FAQ Accordion Styles (index.html) --- */
+.accordion {
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.accordion:hover {
+    background-color: #f1f1f1;
+    border-color: #FF8C00;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    border-left: 4px solid #FF8C00;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #FF8C00;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* --- Storyboard 1: Static Side-by-Side Layout --- */
+.story-panel-hover {
+    display: flex;
+    align-items: center;
+    max-width: 850px;
+    margin: 25px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    gap: 30px;
+}
+
+.story-panel-hover .image-box {
+    flex: 0 0 320px;
+    width: 320px;
+    max-width: 320px;
+}
+
+.story-panel-hover .image-box img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.story-panel-hover .text-box {
+    flex: 1;
+    min-width: 0; /* Prevents long text from breaking flex container boundaries */
+}
+
+.story-panel-hover .text-box h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #FF8C00;
+}
+
+.story-panel-hover .text-box p {
+    margin: 0;
+    color: #444;
+}
+
+@media (max-width: 768px) {
+    .story-panel-hover {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .story-panel-hover .image-box {
+        flex: auto;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* --- Storyboard 2: Single Grid Layout --- */
+.story-panel-grid {
+    max-width: 900px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.story-panel-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
