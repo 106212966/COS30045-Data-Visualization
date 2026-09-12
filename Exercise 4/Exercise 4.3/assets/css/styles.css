@@ -286,3 +286,11 @@ pre {
     font-size: 0.85em;
     border-radius: 5px;
 }
+
+/* --- Exercise 4.3 Step 2 --- */
+.responsive-svg-container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 1200px;
+}
