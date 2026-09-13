@@ -1,3 +1,27 @@
+// Exercise 4.4 Step 2
+d3.csv("assets/data/tvBrandCount.csv", d => {
+  return {
+    brand: d.brand,
+    count: +d.count //=> converts to number
+  };
+
+}).then(data => {
+  // Check the data loaded correctly
+  console.log("Loaded Data:", data);
+
+  // Exercise 4.4 Step 3: Finding information about the data set
+  console.log("Total rows:", data.length);
+  console.log("Max count:", d3.max(data, d => d.count));
+  console.log("Min count:", d3.min(data, d => d.count));
+  console.log("Extent (Min & Max):", d3.extent(data, d => d.count));
+
+  // Sort the data from highest count to lowest count
+  data.sort((a, b) => b.count - a.count);
+  
+  // Call the function for the next exercise
+  drawBarChart(data);
+});
+
 // Exercise 4.2 Step 2
 d3.select("h1")
   .style("color", "green");
