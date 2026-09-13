@@ -54,3 +54,29 @@ svg
     .attr("width", 414)
     .attr("height", 16)
     .attr("fill", "blue");
+
+    // Exercise 4.5 Step 1
+const drawBarChart = data => {
+
+  const barHeight = 20; // Exercise 4.5 Step 2 set height of each bar
+  const barSpacing = 5; // Exercise 4.5 Step 3 space between each bar
+
+  svg
+    .selectAll("rect")
+    .data(data)
+    .join("rect")
+    .attr("class", d => {
+      console.log(d);
+      return `bar bar-${d.count}`;
+    })
+
+  // Exercise 4.5 Step 2
+  .attr("width", d => d.count)
+  .attr("height", barHeight)
+  .attr("fill", "blue")
+
+  // Exercise 4.5 Step 3
+  .attr("x", 0)
+  .attr("y", (d, i) => i * (barHeight + barSpacing))
+
+};
