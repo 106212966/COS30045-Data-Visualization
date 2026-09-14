@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SVG House</title>
+    <!-- Linking external CSS file -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="index.html">
+            <img src="assets/img/PowerIcon.png" alt="Power Logo" id="nav-logo">
+        </a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="televisions.html">Televisions</a></li>
+            <li><a href="storyboard1.html">Storyboard 1</a></li>
+            <li><a href="storyboard2.html">Storyboard 2</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="house.html" class="active">SVG House</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <h1>SVG House</h1>
+
+        <!-- Side-by-Side SVG Section -->
+        <section class="svg-comparison">
+            <!-- Left Side: Original SVG -->
+            <div class="svg-item">
+                <h3>Before</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+                  <!-- Sky -->
+                  <rect x="0" y="0" width="800" height="600" fill="#87CEEB" />
+                  <!-- Sun -->
+                  <circle cx="680" cy="120" r="60" fill="#FFD700" />
+                  <!-- Sun Rays -->
+                  <line x1="680" y1="30" x2="680" y2="10" stroke="#FFD700" stroke-width="6" stroke-linecap="round"/>
+                  <line x1="680" y1="210" x2="680" y2="230" stroke="#FFD700" stroke-width="6" stroke-linecap="round"/>
+                  <line x1="590" y1="120" x2="570" y2="120" stroke="#FFD700" stroke-width="6" stroke-linecap="round"/>
+                  <line x1="770" y1="120" x2="790" y2="120" stroke="#FFD700" stroke-width="6" stroke-linecap="round"/>
+                  <line x1="615" y1="55" x2="600" y2="40" stroke="#FFD700" stroke-width="6" stroke-linecap="round"/>
+                  <line x1="745" y1="185" x2="760" y2="200" stroke="#FFD700" stroke-width="6" stroke-linecap="round"/>
+                  <line x1="615" y1="185" x2="600" y2="200" stroke="#FFD700" stroke-width="6" stroke-linecap="round"/>
+                  <line x1="745" y1="55" x2="760" y2="40" stroke="#FFD700" stroke-width="6" stroke-linecap="round"/>
+                  <!-- Grass -->
+                  <rect x="0" y="400" width="800" height="200" fill="#4CAF50" />
+                  <!-- Tree Trunk -->
+                  <rect x="150" y="280" width="40" height="120" fill="#8B4513" />
+                  <!-- Tree Leaves -->
+                  <circle cx="170" cy="220" r="55" fill="#228B22" />
+                  <circle cx="130" cy="260" r="50" fill="#2E8B57" />
+                  <circle cx="210" cy="260" r="50" fill="#2E8B57" />
+                  <circle cx="170" cy="280" r="45" fill="#228B22" />
+                  <!-- House Base -->
+                  <rect x="300" y="250" width="220" height="150" fill="#FFF8DC" />
+                  <!-- Roof -->
+                  <polygon points="270,250 410,130 550,250" fill="#CD5C5C" />
+                  <!-- Door -->
+                  <rect x="380" y="310" width="60" height="90" fill="#A0522D" />
+                  <!-- Door Knob -->
+                  <circle cx="430" cy="360" r="5" fill="#FFD700" />
+                  <!-- Left Window -->
+                  <rect x="320" y="280" width="45" height="45" fill="#87CEFA" />
+                  <line x1="320" y1="302.5" x2="365" y2="302.5" stroke="#FFFFFF" stroke-width="3" />
+                  <line x1="342.5" y1="280" x2="342.5" y2="325" stroke="#FFFFFF" stroke-width="3" />
+                  <!-- Right Window -->
+                  <rect x="455" y="280" width="45" height="45" fill="#87CEFA" />
+                  <line x1="455" y1="302.5" x2="500" y2="302.5" stroke="#FFFFFF" stroke-width="3" />
+                  <line x1="477.5" y1="280" x2="477.5" y2="325" stroke="#FFFFFF" stroke-width="3" />
+                </svg>
+            </div>
+
+            <!-- Right Side: Edited SVG -->
+            <div class="svg-item">
+                <h3>After</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+                <!-- Sky -->
+                <rect x="0" y="0" width="800" height="600" fill="#87CEEB" />
+
+                <!-- Sun (Moved to Left Side) -->
+                <circle cx="120" cy="120" r="60" fill="#FFD700" />
+                
+                <!-- Sun Rays (Adjusted for Left Side) -->
+                <line x1="120" y1="30" x2="120" y2="10" stroke="#FFD700" stroke-width="6" stroke-linecap="round"/>
+                <line x1="120" y1="210" x2="120" y2="230" stroke="#FFD700" stroke-width="6" stroke-linecap="round"/>
+                <line x1="30" y1="120" x2="10" y2="120" stroke="#FFD700" stroke-width="6" stroke-linecap="round"/>
+                <line x1="210" y1="120" x2="230" y2="120" stroke="#FFD700" stroke-width="6" stroke-linecap="round"/>
+                <line x1="55" y1="55" x2="40" y2="40" stroke="#FFD700" stroke-width="6" stroke-linecap="round"/>
+                <line x1="185" y1="185" x2="200" y2="200" stroke="#FFD700" stroke-width="6" stroke-linecap="round"/>
+                <line x1="55" y1="185" x2="40" y2="200" stroke="#FFD700" stroke-width="6" stroke-linecap="round"/>
+                <line x1="185" y1="55" x2="200" y2="40" stroke="#FFD700" stroke-width="6" stroke-linecap="round"/>
+
+                <!-- Grass -->
+                <rect x="0" y="400" width="800" height="200" fill="#4CAF50" />
+
+                <!-- Tree Trunk (Moved to Right Side) -->
+                <rect x="610" y="280" width="40" height="120" fill="#8B4513" />
+
+                <!-- Tree Leaves (Moved to Right Side) -->
+                <circle cx="630" cy="220" r="55" fill="#228B22" />
+                <circle cx="590" cy="260" r="50" fill="#2E8B57" />
+                <circle cx="670" cy="260" r="50" fill="#2E8B57" />
+                <circle cx="630" cy="280" r="45" fill="#228B22" />
+
+                <!-- House Base -->
+                <rect x="300" y="250" width="220" height="150" fill="#FFF8DC" />
+                
+                <!-- Roof -->
+                <polygon points="270,250 410,130 550,250" fill="#CD5C5C" />
+
+                <!-- Door -->
+                <rect x="380" y="310" width="60" height="90" fill="#A0522D" />
+                
+                <!-- Door Knob -->
+                <circle cx="430" cy="360" r="5" fill="#FFD700" />
+
+                <!-- Left Window -->
+                <rect x="320" y="280" width="45" height="45" fill="#87CEFA" />
+                <line x1="320" y1="302.5" x2="365" y2="302.5" stroke="#FFFFFF" stroke-width="3" />
+                <line x1="342.5" y1="280" x2="342.5" y2="325" stroke="#FFFFFF" stroke-width="3" />
+
+                <!-- Right Window -->
+                <rect x="455" y="280" width="45" height="45" fill="#87CEFA" />
+                <line x1="455" y1="302.5" x2="500" y2="302.5" stroke="#FFFFFF" stroke-width="3" />
+                <line x1="477.5" y1="280" x2="477.5" y2="325" stroke="#FFFFFF" stroke-width="3" />
+              </svg>
+            </div>
+        </section>
+
+      <!-- Code Comparison Table -->
+        <section>
+            <h2>Before and After code comparision</h2>
+            <table class="code-table">
+                <thead>
+                    <tr>
+                        <th>Before</th>
+                        <th>After</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- First Row: Sun Position -->
+                    <tr>
+                        <td>
+                            <strong>Sun Position (Right Side)</strong>
+<pre><code>&lt;!-- Sun --&gt;
+&lt;circle cx="680" cy="120" r="60" fill="#FFD700" /&gt;
+&lt;!-- Sun Rays omitted for brevity --&gt;</code></pre>
+                        </td>
+                        <td>
+                            <strong>Sun Position (Left Side)</strong>
+<pre><code>&lt;!-- Sun (Moved to Left Side) --&gt;
+&lt;circle cx="120" cy="120" r="60" fill="#FFD700" /&gt;
+&lt;!-- Sun Rays omitted for brevity --&gt;</code></pre>
+                        </td>
+                    </tr>
+                    
+                    <!-- Second Row: Tree Position -->
+                    <tr>
+                        <td>
+                            <strong>Tree Position (Left Side)</strong>
+<pre><code>&lt;!-- Tree Trunk --&gt;
+&lt;rect x="150" y="280" width="40" height="120" fill="#8B4513" /&gt;
+
+&lt;!-- Tree Leaves --&gt;
+&lt;circle cx="170" cy="220" r="55" fill="#228B22" /&gt;
+&lt;circle cx="130" cy="260" r="50" fill="#2E8B57" /&gt;
+&lt;circle cx="210" cy="260" r="50" fill="#2E8B57" /&gt;
+&lt;circle cx="170" cy="280" r="45" fill="#228B22" /&gt;</code></pre>
+                        </td>
+                        <td>
+                            <strong>Tree Position (Right Side)</strong>
+<pre><code>&lt;!-- Tree Trunk (Moved to Right Side) --&gt;
+&lt;rect x="610" y="280" width="40" height="120" fill="#8B4513" /&gt;
+
+&lt;!-- Tree Leaves (Moved to Right Side) --&gt;
+&lt;circle cx="630" cy="220" r="55" fill="#228B22" /&gt;
+&lt;circle cx="590" cy="260" r="50" fill="#2E8B57" /&gt;
+&lt;circle cx="670" cy="260" r="50" fill="#2E8B57" /&gt;
+&lt;circle cx="630" cy="280" r="45" fill="#228B22" /&gt;</code></pre>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    <!-- Footer present on all pages -->
+    <footer>
+        <p>2026</p>
+        <p>Wong Joe Yee</p>
+        <p>Generative AI was used for generate the svg house code and explaination of the position of the svg code.</p>
+    </footer>
+</body>
+</html>
