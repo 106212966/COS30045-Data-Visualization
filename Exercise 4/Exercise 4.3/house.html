@@ -96,14 +96,14 @@
                 <!-- Grass -->
                 <rect x="0" y="400" width="800" height="200" fill="#4CAF50" />
 
-                <!-- Tree Trunk (Moved to Right Side) -->
-                <rect x="610" y="280" width="40" height="120" fill="#8B4513" />
+                <!-- Tree Trunk (Moved 20px further right) -->
+                <rect x="630" y="280" width="40" height="120" fill="#8B4513" />
 
-                <!-- Tree Leaves (Moved to Right Side) -->
-                <circle cx="630" cy="220" r="55" fill="#228B22" />
-                <circle cx="590" cy="260" r="50" fill="#2E8B57" />
-                <circle cx="670" cy="260" r="50" fill="#2E8B57" />
-                <circle cx="630" cy="280" r="45" fill="#228B22" />
+                <!-- Tree Leaves (Moved 20px further right) -->
+                <circle cx="650" cy="220" r="55" fill="#228B22" />
+                <circle cx="610" cy="260" r="50" fill="#2E8B57" />
+                <circle cx="690" cy="260" r="50" fill="#2E8B57" />
+                <circle cx="650" cy="280" r="45" fill="#228B22" />
 
                 <!-- House Base -->
                 <rect x="300" y="250" width="220" height="150" fill="#FFF8DC" />
@@ -131,56 +131,71 @@
         </section>
 
       <!-- Code Comparison Table -->
+        <!-- Coordinate Comparison Table -->
         <section>
-            <h2>Before and After code comparision</h2>
+            <h2>Before and After Position Comparison</h2>
             <table class="code-table">
                 <thead>
                     <tr>
+                        <th>Element</th>
                         <th>Before</th>
                         <th>After</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- First Row: Sun Position -->
+                    <!-- Sun Row -->
                     <tr>
+                        <td><strong>Sun (Circle)</strong></td>
+                        <td>cx = 680, cy = 120</td>
+                        <td>cx = 120, cy = 120</td>
+                    </tr>
+                    <!-- Sun Rays Row -->
+                    <tr>
+                        <td><strong>Sun Rays (Lines)</strong></td>
                         <td>
-                            <strong>Sun Position (Right Side)</strong>
-<pre><code>&lt;!-- Sun --&gt;
-&lt;circle cx="680" cy="120" r="60" fill="#FFD700" /&gt;
-&lt;!-- Sun Rays omitted for brevity --&gt;</code></pre>
+                            x1=680, x2=680 (Vertical)<br>
+                            x1=590, x2=570 (Left)<br>
+                            x1=770, x2=790 (Right)<br>
+                            x1=615, x2=600 (Left Diags)<br>
+                            x1=745, x2=760 (Right Diags)
                         </td>
                         <td>
-                            <strong>Sun Position (Left Side)</strong>
-<pre><code>&lt;!-- Sun (Moved to Left Side) --&gt;
-&lt;circle cx="120" cy="120" r="60" fill="#FFD700" /&gt;
-&lt;!-- Sun Rays omitted for brevity --&gt;</code></pre>
+                            x1=120, x2=120 (Vertical)<br>
+                            x1=30, x2=10 (Left)<br>
+                            x1=210, x2=230 (Right)<br>
+                            x1=55, x2=40 (Left Diags)<br>
+                            x1=185, x2=200 (Right Diags)
                         </td>
                     </tr>
-                    
-                    <!-- Second Row: Tree Position -->
+                    <!-- Tree Trunk Row -->
                     <tr>
-                        <td>
-                            <strong>Tree Position (Left Side)</strong>
-<pre><code>&lt;!-- Tree Trunk --&gt;
-&lt;rect x="150" y="280" width="40" height="120" fill="#8B4513" /&gt;
-
-&lt;!-- Tree Leaves --&gt;
-&lt;circle cx="170" cy="220" r="55" fill="#228B22" /&gt;
-&lt;circle cx="130" cy="260" r="50" fill="#2E8B57" /&gt;
-&lt;circle cx="210" cy="260" r="50" fill="#2E8B57" /&gt;
-&lt;circle cx="170" cy="280" r="45" fill="#228B22" /&gt;</code></pre>
-                        </td>
-                        <td>
-                            <strong>Tree Position (Right Side)</strong>
-<pre><code>&lt;!-- Tree Trunk (Moved to Right Side) --&gt;
-&lt;rect x="610" y="280" width="40" height="120" fill="#8B4513" /&gt;
-
-&lt;!-- Tree Leaves (Moved to Right Side) --&gt;
-&lt;circle cx="630" cy="220" r="55" fill="#228B22" /&gt;
-&lt;circle cx="590" cy="260" r="50" fill="#2E8B57" /&gt;
-&lt;circle cx="670" cy="260" r="50" fill="#2E8B57" /&gt;
-&lt;circle cx="630" cy="280" r="45" fill="#228B22" /&gt;</code></pre>
-                        </td>
+                        <td><strong>Tree Trunk (Rect)</strong></td>
+                        <td>x = 150, y = 280</td>
+                        <td>x = 630, y = 280</td>
+                    </tr>
+                    <!-- Tree Leaves Top Row -->
+                    <tr>
+                        <td><strong>Tree Leaves - Top (Circle)</strong></td>
+                        <td>cx = 170, cy = 220</td>
+                        <td>cx = 650, cy = 220</td>
+                    </tr>
+                    <!-- Tree Leaves Left Row -->
+                    <tr>
+                        <td><strong>Tree Leaves - Left (Circle)</strong></td>
+                        <td>cx = 130, cy = 260</td>
+                        <td>cx = 610, cy = 260</td>
+                    </tr>
+                    <!-- Tree Leaves Right Row -->
+                    <tr>
+                        <td><strong>Tree Leaves - Right (Circle)</strong></td>
+                        <td>cx = 210, cy = 260</td>
+                        <td>cx = 690, cy = 260</td>
+                    </tr>
+                    <!-- Tree Leaves Bottom Row -->
+                    <tr>
+                        <td><strong>Tree Leaves - Bottom (Circle)</strong></td>
+                        <td>cx = 170, cy = 280</td>
+                        <td>cx = 650, cy = 280</td>
                     </tr>
                 </tbody>
             </table>

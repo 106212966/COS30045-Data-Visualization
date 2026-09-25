@@ -268,7 +268,12 @@ footer {
 .code-table th, .code-table td {
     border: 1px solid #ccc;
     padding: 15px;
-    vertical-align: top;
+    vertical-align: middle; /* Vertically centers the text */
+    text-align: center; /* Horizontally centers the coordinates */
+}
+
+.code-table td:first-child, .code-table th:first-child {
+    text-align: left; 
 }
 
 .code-table th {
