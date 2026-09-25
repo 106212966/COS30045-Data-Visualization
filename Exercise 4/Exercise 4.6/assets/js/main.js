@@ -1,7 +1,7 @@
 // Exercise 4.3 Step 2
 const svg = d3.select(".responsive-svg-container")
   .append("svg")
-    .attr("viewBox", "0 0 500 1600") 
+    .attr("viewBox", "0 0 500 500") 
     .style("border", "1px solid black");
 
 // Exercise 4.4 Step 2
@@ -13,13 +13,12 @@ d3.csv("assets/data/tvBrandCount.csv", d => {
 
 }).then(data => {
   // Check the data loaded correctly
+  // Exercise 4.6
   console.log("Loaded Data:", data);
-
-  // Exercise 4.4 Step 3: Finding information about the data set
-  console.log("Total rows:", data.length);
-  console.log("Max count:", d3.max(data, d => d.count));
-  console.log("Min count:", d3.min(data, d => d.count));
-  console.log("Extent (Min & Max):", d3.extent(data, d => d.count));
+  console.log(data);
+  console.log(data.length);
+  console.log(d3.max(data, d => d.count));
+  console.log(d3.min(data, d => d.count));
 
   // Sort the data from highest count to lowest count
   data.sort((a, b) => b.count - a.count);
@@ -28,84 +27,48 @@ d3.csv("assets/data/tvBrandCount.csv", d => {
   drawBarChart(data);
 });
 
-// Exercise 4.2 Step 2
-
-d3.select("h1")
-  .style("color", "green");
-
-// Exercise 4.2 Step 3
-
-d3.select("div")
-  .append("p")
-  .text("Purchasing a low energy consumption TV will help with your energy bills!");
-
-// Exercise 4.2 Step 4
-
-d3.select("svg")
-  .append("rect")
-  .attr("x", 50)
-  .attr("y", 50)
-  .attr("width", 100)
-  .attr("height", 30)
-  .style("fill", "green");
-
-// Exercise 4.3 Step 3
-
-svg
-  .append("rect")
-    .attr("x", 10)
-    .attr("y", 10)
-    .attr("width", 414)
-    .attr("height", 16)
-    .attr("fill", "blue");
-
-// Exercise 4.5 Step 1
-
 const drawBarChart = data => {
-
-  /*// Exercise 4.5 Step 2 set height of each bar
-
-  const barHeight = 20;
-
-  // Exercise 4.5 Step 3 space between each bar
-
-  const barSpacing = 5; Commented out*/
-
-  // Exercise 4.6 Step 1
-
+  // Exercise 4.6 Step 1 & 2
   const xScale = d3.scaleLinear()
-    .domain([0, 1200])
-    .range([0, 400]);
-
-  // Exercise 4.6 Step 2
+    .domain([0, 1100])
+    .range([0, 350]); // Ensure the range can see
 
   const yScale = d3.scaleBand()
     .domain(data.map(d => d.brand))
-    .range([0, 1400])
+    .range([0, 500])
     .padding(0.1);
+ 
+  // Exercise 4.7 Step 2: Create a group container for our labels
+  const barAndLabel = svg
+    .selectAll("g") // This replaces the old svg.selectAll("rect")
+    .data(data)
+    .join("g")
+        .attr("transform", d => `translate(0, ${yScale(d.brand)})`);
 
-  svg
-  .selectAll("rect")
-  .data(data)
-  .join("rect")
-  .attr("class", d => {
+    // Exercise 4.7 Step 3: Add back the rectangles
+    barAndLabel
+    .append("rect")
+        .attr("width", d => xScale(d.count))
+        .attr("height", yScale.bandwidth())
+        .attr("fill", "blue")
+        .attr("x", 100) // Step 1 add x-axis 100
+        .attr("y",0); // Step 3
 
-    console.log(d);
-    return `bar bar-${d.count}`;
+    // Exercise 4.7 Step 4: Add the column category text
+    barAndLabel
+    .append("text")
+        .text(d => d.brand)
+        .attr("x", 90) 
+        .attr("y", 15)
+        .attr("text-anchor", "end")
+        .style("font-size", "13px");
 
-  })
-
-  // Exercise 4.5 Step 2
-
-  .attr("width", d =>  xScale(d.count)) // Exercise 4.6 Step 1 change to use xScale to scale the width of the bars
-  .attr("height", yScale.bandwidth()) // Exercise 4.6 Step 2 change to use yScale.bandwidth() to set the height of the bars
-  .attr("fill", "blue")
-
-
-  // Exercise 4.5 Step 3
-
-  .attr("x", 0)
-  .attr("y", (d, i) => yScale(d.brand)); // Exercise 4.6 Step 2 change to use yScale to set the y position of the bars
-
-}; 
+    // Exercise 4.7 Step 5: Add the value number
+    barAndLabel
+    .append("text")
+        .text(d => d.count)
+        .attr("x", d => 100 + xScale(d.count) + 4)
+        .attr("y", 12)
+        .style("font-size", "13px");
+};
 
