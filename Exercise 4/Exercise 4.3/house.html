@@ -77,13 +77,13 @@
             <div class="svg-item">
                 <h3>After</h3>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
-                  <!-- Sky (CHANGED FILL COLOR: Light Blue to Evening Coral) -->
+                  <!-- Sky -->
                   <rect x="0" y="0" width="800" height="600" fill="#FF7F50" />
                   
-                  <!-- Sun (Unchanged) -->
+                  <!-- Sun -->
                   <circle cx="680" cy="120" r="60" fill="#FFD700" />
                   
-                  <!-- Sun Rays (CHANGED STROKE ATTRIBUTE: stroke-width from 6 to 12) -->
+                  <!-- Sun Rays -->
                   <line x1="680" y1="30" x2="680" y2="10" stroke="#FFD700" stroke-width="12" stroke-linecap="round"/>
                   <line x1="680" y1="210" x2="680" y2="230" stroke="#FFD700" stroke-width="12" stroke-linecap="round"/>
                   <line x1="590" y1="120" x2="570" y2="120" stroke="#FFD700" stroke-width="12" stroke-linecap="round"/>
@@ -93,39 +93,42 @@
                   <line x1="615" y1="185" x2="600" y2="200" stroke="#FFD700" stroke-width="12" stroke-linecap="round"/>
                   <line x1="745" y1="55" x2="760" y2="40" stroke="#FFD700" stroke-width="12" stroke-linecap="round"/>
                   
-                  <!-- Grass (Unchanged) -->
+                  <!-- Grass -->
                   <rect x="0" y="400" width="800" height="200" fill="#4CAF50" />
                   
-                  <!-- ADDING OTHER ITEMS: Stone Path from door to bottom -->
+                  <!-- Stone Path -->
                   <polygon points="380,400 440,400 490,600 330,600" fill="#A9A9A9" />
 
-                  <!-- Tree Trunk (Unchanged) -->
+                  <!-- Tree Trunk -->
                   <rect x="150" y="280" width="40" height="120" fill="#8B4513" />
-                  <!-- Tree Leaves (Unchanged) -->
+                  <!-- Tree Leaves -->
                   <circle cx="170" cy="220" r="55" fill="#228B22" />
                   <circle cx="130" cy="260" r="50" fill="#2E8B57" />
                   <circle cx="210" cy="260" r="50" fill="#2E8B57" />
                   <circle cx="170" cy="280" r="45" fill="#228B22" />
                   
-                  <!-- House Base (Unchanged) -->
+                  <!-- House Base -->
                   <rect x="300" y="250" width="220" height="150" fill="#FFF8DC" />
-                  <!-- Roof (Unchanged) -->
+                  <!-- Roof -->
                   <polygon points="270,250 410,130 550,250" fill="#CD5C5C" />
                   
-                  <!-- Door (Unchanged) -->
+                  <!-- Door -->
                   <rect x="380" y="310" width="60" height="90" fill="#A0522D" />
                   
-                  <!-- Door Knob (MOVING SHAPES: Moved from right side cx="430" to left side cx="390") -->
+                  <!-- Door Knob -->
                   <circle cx="390" cy="360" r="5" fill="#FFD700" />
                   
-                  <!-- Left Window (Unchanged) -->
-                  <rect x="320" y="280" width="45" height="45" fill="#87CEFA" />
-                  <line x1="320" y1="302.5" x2="365" y2="302.5" stroke="#FFFFFF" stroke-width="3" />
-                  <line x1="342.5" y1="280" x2="342.5" y2="325" stroke="#FFFFFF" stroke-width="3" />
-                  <!-- Right Window (Unchanged) -->
-                  <rect x="455" y="280" width="45" height="45" fill="#87CEFA" />
-                  <line x1="455" y1="302.5" x2="500" y2="302.5" stroke="#FFFFFF" stroke-width="3" />
-                  <line x1="477.5" y1="280" x2="477.5" y2="325" stroke="#FFFFFF" stroke-width="3" />
+                  <!-- Windows Group (Grouped and Translated down by 20px) -->
+                  <g id="windows" transform="translate(0, 20)">
+                      <!-- Left Window -->
+                      <rect x="320" y="280" width="45" height="45" fill="#87CEFA" />
+                      <line x1="320" y1="302.5" x2="365" y2="302.5" stroke="#FFFFFF" stroke-width="3" />
+                      <line x1="342.5" y1="280" x2="342.5" y2="325" stroke="#FFFFFF" stroke-width="3" />
+                      <!-- Right Window -->
+                      <rect x="455" y="280" width="45" height="45" fill="#87CEFA" />
+                      <line x1="455" y1="302.5" x2="500" y2="302.5" stroke="#FFFFFF" stroke-width="3" />
+                      <line x1="477.5" y1="280" x2="477.5" y2="325" stroke="#FFFFFF" stroke-width="3" />
+                  </g>
                 </svg>
             </div>
         </section>
@@ -165,6 +168,12 @@
                         <td>Stone Path</td>
                         <td><em>Did not exist</em></td>
                         <td>Added a <code>&lt;polygon&gt;</code> with <code>points="380,400 440,400 490,600 330,600"</code> and <code>fill="#A9A9A9"</code> (Grey) to create a path from the door to the bottom edge.</td>
+                    </tr>
+                    <!-- Grouping and Translating Row -->
+                    <tr>
+                        <td>Windows (Grouping & Transform)</td>
+                        <td>Separate <code>&lt;rect&gt;</code> and <code>&lt;line&gt;</code> tags.</td>
+                        <td>Wrapped both windows in a single <code>&lt;g&gt;</code> group tag and added <code>transform="translate(0, 20)"</code> to move them down together.</td>
                     </tr>
                 </tbody>
             </table>
