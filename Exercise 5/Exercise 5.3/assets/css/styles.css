@@ -150,8 +150,6 @@ footer {
 
 /* --- 5.1 Chart Container --- */
 .responsive-svg-container {
-    margin-right: auto;
-    margin-left: auto;
     width: 100%;
-    max-width: 1200px; /* You can adjust this width based on your preference */
+    height: auto;
 }
