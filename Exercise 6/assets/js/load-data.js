@@ -19,6 +19,11 @@ d3.csv(dataset, function(d) {
 
     drawHistogram(data);
     populateFilters(data);
+
+    // Add new functions for Exercise 6.3 and 6.4
+    drawScatterplot(data);
+    createTooltip();
+    handleMouseEvents();
     
 }).catch(function(error) {
     // Error handling block
