@@ -28,6 +28,10 @@ d3.csv("assets/data/tvBrandCount.csv", d => {
 });
 
 const drawBarChart = data => {
+  // Exercise 4.5 Step 2 (Commented out Exercise 4.6 instructions)
+  // const barHeight = 20;
+  // const barSpacing = 5;
+
   // Exercise 4.6 Step 1 & 2
   const xScale = d3.scaleLinear()
     .domain([0, 1100])
