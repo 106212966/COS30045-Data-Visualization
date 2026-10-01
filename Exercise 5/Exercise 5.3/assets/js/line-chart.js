@@ -63,7 +63,7 @@ const drawLineChart = data => {
     // Add y-axis label
     innerChart
         .append("text")
-        .text("Average Price ($ per MWh)") // Updated to reflect the price data
+        .text("Average Price ($ per mWh)") // Updated to reflect the price data
         .attr("x", -30)
         .attr("y", -20)
         .style("text-anchor", "start");
